@@ -2,7 +2,7 @@
 
 1. Environment
 
-- Create a .env in the project root with `APOLLO_KEY` and `APOLLO_GRAPH_REF`
+Create a `.env` in the project root with `APOLLO_KEY` and `APOLLO_GRAPH_REF`
 
 2. Compose
 

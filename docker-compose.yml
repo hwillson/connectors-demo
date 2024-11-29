@@ -1,0 +1,22 @@
+version: "3"
+services:
+  router:
+    platform: linux/amd64
+    environment:
+      - ENABLE_EXPOSE_QUERY_PLAN_ENV=true
+      - APOLLO_KEY=${APOLLO_KEY}
+      - APOLLO_GRAPH_REF=${APOLLO_GRAPH_REF}
+    build: router
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./router:/volume
+    command:
+      [
+        "-c",
+        "/volume/router.yml",
+        "-s",
+        "/volume/supergraph.graphql",
+      ]

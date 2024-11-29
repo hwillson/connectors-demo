@@ -17,6 +17,7 @@ services:
       [
         "-c",
         "/volume/router.yml",
+        "--dev",
         "-s",
         "/volume/supergraph.graphql",
       ]
